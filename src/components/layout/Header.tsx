@@ -13,7 +13,6 @@ import {
   Phone,
   ChevronDown,
   Sparkles,
-  Scissors,
   Flame,
   Home,
   Layers,
@@ -195,7 +194,7 @@ export function Header() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search t-shirts, pajamas, skinny tops, custom DTF..."
+                placeholder="Search t-shirts, pajamas, skinny tops..."
                 className="w-full bg-transparent px-3 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none"
               />
 
@@ -393,10 +392,6 @@ export function Header() {
         <Link href="/shop" className="flex flex-col items-center text-[10px] font-bold text-slate-700 hover:text-slate-950">
           <Layers className="w-5 h-5 mb-0.5" />
           <span>Shop</span>
-        </Link>
-        <Link href="/dtf-printing" className="flex flex-col items-center text-[10px] font-bold text-teal-700">
-          <Scissors className="w-5 h-5 mb-0.5" />
-          <span>DTF Print</span>
         </Link>
         <Link href="/account/wishlist" className="relative flex flex-col items-center text-[10px] font-bold text-slate-700">
           <Heart className="w-5 h-5 mb-0.5" />
