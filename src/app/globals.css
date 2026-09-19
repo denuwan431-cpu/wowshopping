@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0f172a;
+  --primary-foreground: #ffffff;
+  --secondary: #ea580c;
+  --secondary-foreground: #ffffff;
+  --accent: #0284c7;
+  --accent-foreground: #ffffff;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --foreground: #090d16;
+  --muted: #64748b;
+  --muted-light: #f1f5f9;
+  --border: #e2e8f0;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --radius: 0.5rem;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Transitions */
+* {
+  border-color: var(--border);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 220ms ease-out forwards;
+}
+
+/* Theme Manager bridge: common storefront utility colors follow the selected theme. */
+.bg-slate-950{background-color:var(--primary)!important}.text-slate-950{color:var(--primary)!important}.border-slate-950{border-color:var(--primary)!important}
+.bg-slate-900{background-color:color-mix(in srgb,var(--primary) 88%,#fff)!important}.text-slate-900{color:var(--foreground)!important}
+.bg-amber-500,.bg-amber-600{background-color:var(--secondary)!important}.text-amber-400,.text-amber-500,.text-amber-600{color:var(--secondary)!important}.border-amber-500{border-color:var(--secondary)!important}
+.bg-white{background-color:var(--surface)!important}.text-slate-800,.text-slate-700{color:color-mix(in srgb,var(--foreground) 78%,#fff)!important}
